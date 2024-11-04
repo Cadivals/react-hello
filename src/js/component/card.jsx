@@ -1,8 +1,9 @@
 import React from "react";
 
 const Card = ({digit}) =>{
-    return(<div className="bg-black" style={{width:"100%"}} >
-        <h1 className="card bg-dark text-white mx-5 gap-0 " style={{width: "100px", height: "100px", justifyContent:"center", textAlign:"center"}}>
+    return(<div className="" style={{width:"100%", backgroundColor:"#1e4b66"}} >
+        <h1 className="card mx-5 gap-0 " 
+        style={{width: "100px", height: "100px", justifyContent:"center", textAlign:"center", backgroundColor:"cadetblue", borderRadius:"35px", color:"white"}}>
             {digit}
              
         </h1>
