@@ -11,14 +11,19 @@ import Home from "./component/home.jsx";
 //render your react application
 const root = ReactDOM.createRoot(document.getElementById('app'));
 let contador = 0
-
+let cuentaregresiva = 1000000
     setInterval(() => {
         contador++
+        cuentaregresiva--
    
     console.log(contador)
     root.render(
-        < Home time={contador} />
+        < Home contador={contador} cuentaregresiva={cuentaregresiva} />
     );
     }, 1000)  
+
+
+   
+
 
     
