@@ -1,26 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Card from "./card";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+const Home = ({time}) => {
+    
 
-//create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+    return (
+        <div className="justify-content-center d-flex">
+           <Card digit={<i className="fa-solid fa-clock"></i>} />
+            <Card digit={Math.floor(time / 100000) % 10} />
+            <Card digit={Math.floor(time / 10000) % 10} />
+            <Card digit={Math.floor(time / 1000) % 10} />
+            <Card digit={Math.floor(time / 100) % 10} />
+            <Card digit={Math.floor(time / 10) % 10} />
+            <Card digit={time % 10} />
+        </div>
+    );
 };
 
 export default Home;
